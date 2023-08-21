@@ -1,0 +1,6 @@
+-- noinspection SqlNoDataSourceInspectionForFile
+
+BEGIN;
+
+COMMIT;
+

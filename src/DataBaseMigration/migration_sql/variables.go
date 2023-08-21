@@ -1,0 +1,4 @@
+package migration_sql
+
+const MIGRATE_DB_TO_DEV_ENVIRONMENT = 4
+const MIGRATE_DB_TO_ACC_ENVIRONMENT = 2

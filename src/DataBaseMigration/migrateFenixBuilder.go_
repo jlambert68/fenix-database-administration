@@ -1,0 +1,25 @@
+package DataBaseMigration
+
+import (
+	"embed"
+	"fenix-database-administration/src/SharedCode"
+	_ "github.com/golang-migrate/migrate/v4/database/postgres"
+)
+
+//go:embed migration_sql/FenixBuilder/*.sql
+var fenixBuilder embed.FS
+
+const fenixBuilderPath = "migration_sql/FenixBuilder"
+
+// MigrateDatabaseFenixBuilder migrate the Builder parts of the Database.
+func MigrateDatabaseFenixBuilder(targetDatabase string) {
+
+	migrateDatabase(targetDatabase,
+		&fenixBuilder,
+		SharedCode.TargetMigrationStepNumberInDevEnvironment,
+		SharedCode.TargetMigrationStepNumberInAccEnvironment,
+		fenixBuilderPath,
+		SharedCode.DBNameFenixDatabasesSchemaFenixBuilder,
+		SharedCode.ForceTargetMigrationStepNumberInDevEnvironment,
+		SharedCode.ForceTargetMigrationStepNumberInAccEnvironment)
+}

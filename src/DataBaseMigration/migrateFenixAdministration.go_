@@ -1,0 +1,25 @@
+package DataBaseMigration
+
+import (
+	"embed"
+	"fenix-database-administration/src/SharedCode"
+	_ "github.com/golang-migrate/migrate/v4/database/postgres"
+)
+
+//go:embed migration_sql/FenixAdministration/*.sql
+var fenixAdministration embed.FS
+
+const fenixAdministrationPath = "migration_sql/FenixAdministration"
+
+// MigrateDatabaseFenixAdministration migrate the admin parts of the Database
+func MigrateDatabaseFenixAdministration(targetDatabase string) {
+
+	migrateDatabase(targetDatabase,
+		&fenixAdministration,
+		SharedCode.FenixAdminTargetMigrationStepNumberInDevEnvironment,
+		SharedCode.FenixAdminTargetMigrationStepNumberInAccEnvironment,
+		fenixAdministrationPath,
+		SharedCode.DBNameFenixDatabasesSchemaFenixDomainAdministration,
+		SharedCode.FenixAdminForceTargetMigrationStepNumberInDevEnvironment,
+		SharedCode.FenixAdminForceTargetMigrationStepNumberInAccEnvironment)
+}
