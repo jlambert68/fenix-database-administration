@@ -83,4 +83,6 @@ var (
 	UseTargetStepOrReleativeStepsToMigrateInAccEnvironment UseTargetStepOrReleativeStepsType
 	UpdatePasswordInDevEnvironment                         bool
 	UpdatePasswordInAccEnvironment                         bool
+
+	DB_PASS_WhenRunLocally string
 )

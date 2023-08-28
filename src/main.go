@@ -2,7 +2,6 @@ package main
 
 import (
 	"fenix-database-administration/src/DataBaseMigration"
-	"fenix-database-administration/src/DatabasePasswordChanger"
 	"fenix-database-administration/src/SharedCode"
 	gRPCServer "fenix-database-administration/src/gRPC"
 	"github.com/sirupsen/logrus"
@@ -28,20 +27,22 @@ func main() {
 	go gRPCServer.GRPCServerObject.InitGrpcServer()
 
 	// Update password for DB-user 'fenix-cloudrun-dbuser'
-	DatabasePasswordChanger.UpdateUsersDatabasePassword(
-		SharedCode.ProjectId,
-		SharedCode.DatabaseInstanceName,
-		SharedCode.SecretManagerPathForFenixUserDbPassword,
-		SharedCode.LatestSecretVersion,
-		SharedCode.DbUserName_fenix_user)
+	/*
+		DatabasePasswordChanger.UpdateUsersDatabasePassword(
+			SharedCode.ProjectId,
+			SharedCode.DatabaseInstanceName,
+			SharedCode.SecretManagerPathForFenixUserDbPassword,
+			SharedCode.LatestSecretVersion,
+			SharedCode.DbUserName_fenix_user)
 
-	// Update password for DB-user 'postgres'
-	DatabasePasswordChanger.UpdateUsersDatabasePassword(
-		SharedCode.ProjectId,
-		SharedCode.DatabaseInstanceName,
-		SharedCode.SecretManagerPathForPostgresDbPassword,
-		SharedCode.LatestSecretVersion,
-		SharedCode.DbUserName_postgres)
+		// Update password for DB-user 'postgres'
+		DatabasePasswordChanger.UpdateUsersDatabasePassword(
+			SharedCode.ProjectId,
+			SharedCode.DatabaseInstanceName,
+			SharedCode.SecretManagerPathForPostgresDbPassword,
+			SharedCode.LatestSecretVersion,
+			SharedCode.DbUserName_postgres)
+	*/
 
 	// Migrate database
 	DataBaseMigration.MigrateFenixDatabase(SharedCode.DBNameToTarget)

@@ -248,4 +248,8 @@ func init() {
 	SharedCode.UpdatePasswordInAccEnvironment = tempUpdatePassword
 	fmt.Printf("UPDATE_PASSWORD_ACC_ENVIRONMENT value: %v\n", tempUpdatePassword)
 
+	// Get environment variable for DB-password when running locally
+	SharedCode.DB_PASS_WhenRunLocally = mustGetenv("DB_PASS")
+	fmt.Println("DB_PASS: " + SharedCode.DB_PASS_WhenRunLocally)
+
 }

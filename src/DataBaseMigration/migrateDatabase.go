@@ -10,7 +10,16 @@ import (
 	"github.com/golang-migrate/migrate/v4/source/iofs"
 	"github.com/sirupsen/logrus"
 	"log"
+	"os"
 )
+
+func MustGetEnvironmentVariable(k string) string {
+	v := os.Getenv(k)
+	if v == "" {
+		log.Fatalf("Warning: %s environment variable not set.\n", k)
+	}
+	return v
+}
 
 // General code for migrating database, up or dowm, regarding what tables and data that exist within the database
 func migrateDatabase(targetDatabase string,
@@ -104,8 +113,12 @@ func migrateDatabase(targetDatabase string,
 	}
 
 	// Get latest password
-	passwordFromSecretManager, err = SharedCode.AccessSecretVersion(
-		SharedCode.SecretManagerPathForPostgresDbPassword + SharedCode.LatestSecretVersion)
+	if SharedCode.ExecutionLocation == SharedCode.GCP {
+		passwordFromSecretManager, err = SharedCode.AccessSecretVersion(
+			SharedCode.SecretManagerPathForPostgresDbPassword + SharedCode.LatestSecretVersion)
+	} else {
+		passwordFromSecretManager = SharedCode.DB_PASS_WhenRunLocally
+	}
 
 	if err != nil {
 
@@ -151,14 +164,39 @@ func migrateDatabase(targetDatabase string,
 	connectionName := SharedCode.DatabaseInstanceConnectionName //os.Getenv("INSTANCE_CONNECTION_NAME")
 
 	var dbURI string
+	var socketDir string
 
-	socketDir := "/cloudsql"
-	dbURI = fmt.Sprintf("user=%s password=%s database=%s host=%s/%s",
-		SharedCode.DbUserName_postgres,
-		passwordFromSecretManager,
-		targetDatabase,
-		socketDir,
-		connectionName)
+	var (
+		dbUser    = MustGetEnvironmentVariable("DB_USER") // e.g. 'my-db-user'
+		dbPwd     = MustGetEnvironmentVariable("DB_PASS") // e.g. 'my-db-password'
+		dbTCPHost = MustGetEnvironmentVariable("DB_HOST") // e.g. '127.0.0.1' ('172.17.0.1' if deployed to GAE Flex)
+		dbPort    = MustGetEnvironmentVariable("DB_PORT") // e.g. '5432'
+		dbName    = MustGetEnvironmentVariable("DB_NAME") // e.g. 'my-database'
+	)
+
+	if SharedCode.ExecutionLocation == SharedCode.LocalhostNoDocker {
+
+		dbURI = fmt.Sprintf("host=%s user=%s password=%s port=%s database=%s sslmode=disable", dbTCPHost, dbUser, dbPwd, dbPort, dbName)
+
+	} else {
+
+		//var dbInstanceConnectionName = MustGetEnvironmentVariable("DB_INSTANCE_CONNECTION_NAME")
+
+		socketDir, isSet := os.LookupEnv("DB_SOCKET_DIR")
+		if !isSet {
+			socketDir = "/cloudsql"
+		}
+
+		dbURI = fmt.Sprintf("user=%s password=%s database=%s host=%s/%s pool_max_conns=%s", dbUser, dbPwd, dbName, socketDir)
+
+		//socketDir := "/cloudsql"
+		dbURI = fmt.Sprintf("user=%s password=%s database=%s host=%s/%s",
+			SharedCode.DbUserName_postgres,
+			passwordFromSecretManager,
+			targetDatabase,
+			socketDir,
+			connectionName)
+	}
 
 	// Is only used in for logging
 	dbURIacc := fmt.Sprintf("user=%s password=%s database=%s host=%s/%s",
