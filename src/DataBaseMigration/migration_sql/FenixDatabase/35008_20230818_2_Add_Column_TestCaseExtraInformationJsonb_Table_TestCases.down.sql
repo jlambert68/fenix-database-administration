@@ -3,6 +3,6 @@
 BEGIN;
 
 ALTER TABLE "FenixBuilder"."TestCases"
-    DROP "TestCaseExtraInformationJsonb";
+    DROP "TestCaseExtraInformationAsJsonb";
 
 COMMIT ;

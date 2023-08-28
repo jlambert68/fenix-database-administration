@@ -3,6 +3,6 @@
 BEGIN;
 
 ALTER TABLE "FenixBuilder"."TestCases"
-    ADD "TestCaseExtraInformationJsonb" jsonb;
+    ADD "TestCaseExtraInformationAsJsonb" jsonb;
 
 COMMIT ;
