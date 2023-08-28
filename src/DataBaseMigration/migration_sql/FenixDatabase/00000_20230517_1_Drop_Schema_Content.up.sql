@@ -3,6 +3,7 @@
 BEGIN;
 
 -- Delete the Schema
+DROP SCHEMA IF EXISTS "FenixExecution" CASCADE;
 DROP SCHEMA IF EXISTS "FenixBuilder" CASCADE;
 DROP SCHEMA IF EXISTS "FenixDomainAdministration" CASCADE;
 

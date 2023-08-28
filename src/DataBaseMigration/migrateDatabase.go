@@ -380,7 +380,7 @@ func migrateDatabase(targetDatabase string,
 				"schema":           schemaName,
 				"schemaExists":     schemaExists,
 				"tablesInDatabase": tablesInDatabase,
-			}).Error("Tables in Schema")
+			}).Info("Tables in Schema")
 		}
 
 	} else {
