@@ -3,8 +3,7 @@
 BEGIN;
 
     insert into "FenixExecution"."TestInstructionExecutionStatusEnum" ("gRPC_Id", "gRPC_Name")
-    values  (0, 'VALUE_NOT_SET'),
-            (1, 'TIE_INITIATED'),
+    values  (1, 'TIE_INITIATED'),
             (2, 'TIE_EXECUTING'),
             (3, 'TIE_CONTROLLED_INTERRUPTION'),
             (4, 'TIE_CONTROLLED_INTERRUPTION_CAN_BE_RERUN'),

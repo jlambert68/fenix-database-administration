@@ -3,8 +3,7 @@
 BEGIN;
 
     insert into "FenixExecution"."TestCaseExecutionStatusEnum" ("gRPC_Id", "gRPC_Name")
-    values  (0, 'VALUE_NOT_SET'),
-            (1, 'TCE_INITIATED'),
+    values  (1, 'TCE_INITIATED'),
             (2, 'TCE_EXECUTING'),
             (3, 'TCE_CONTROLLED_INTERRUPTION'),
             (4, 'TCE_CONTROLLED_INTERRUPTION_CAN_BE_RERUN'),
