@@ -29,7 +29,10 @@ create table "FenixExecution"."TestCasesFinishedExecution"
     "ExecutionHasFinished"           boolean                  not null,
     "UniqueCounter"                  serial
         unique,
-    "ExecutionStatusUpdateTimeStamp" timestamp with time zone
+    "ExecutionStatusUpdateTimeStamp" timestamp with time zone,
+    "ExecutionStatusReportLevel"     integer                  not null
+        constraint "TestCasesFinishedExecution_ExecutionStatusReportLevelEnum _gRPC"
+            references "FenixExecution"."ExecutionStatusReportLevelEnum"
 );
 
 comment on table "FenixExecution"."TestCasesFinishedExecution" is 'Holds all TestCases that has finished their executions, independent of outcome';

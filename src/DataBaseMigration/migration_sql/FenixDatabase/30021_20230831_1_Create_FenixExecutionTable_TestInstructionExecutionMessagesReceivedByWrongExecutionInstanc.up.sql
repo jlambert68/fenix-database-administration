@@ -17,7 +17,5 @@ comment on table "FenixExecution"."TestInstructionExecutionMessagesReceivedByWro
 alter table "FenixExecution"."TestInstructionExecutionMessagesReceivedByWrongExecutionInstanc"
     owner to postgres;
 
-
-
 COMMIT;
 
