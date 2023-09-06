@@ -31,7 +31,7 @@ create table "FenixExecution"."TestCasesUnderExecution"
         unique,
     "ExecutionStatusUpdateTimeStamp" timestamp with time zone,
     "ExecutionStatusReportLevel"     integer                  not null
-        constraint "TestCasesUnderExecution_ExecutionStatusReportLevelEnum _gRPC_Id"
+        constraint testcasesunderexecution_executionstatusreportlevelenum_grpc_id_fk
             references "FenixExecution"."ExecutionStatusReportLevelEnum"
 );
 

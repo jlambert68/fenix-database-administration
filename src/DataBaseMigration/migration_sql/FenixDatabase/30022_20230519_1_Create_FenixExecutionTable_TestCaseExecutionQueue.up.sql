@@ -26,7 +26,7 @@ create table "FenixExecution"."TestCaseExecutionQueue"
     "UniqueCounter"               serial
         unique,
     "ExecutionStatusReportLevel " integer                  not null
-        constraint "TestCaseExecutionQueue_ExecutionStatusReportLevelEnum _gRPC_Id_"
+        constraint testcasesunderexecution_executionstatusreportlevelenum_grpc_id_fk
             references "FenixExecution"."ExecutionStatusReportLevelEnum"
 );
 

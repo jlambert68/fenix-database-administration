@@ -4,9 +4,9 @@ BEGIN;
 
 create table "FenixExecution"."ExecutionStatusReportLevelEnum"
 (
-    "gRPC_Id"             serial
-        constraint "ExecutionStatusReportLevelEnum _pk"
-            primary key,
+    "gRPC_Id"   integer not null
+        primary key
+        unique,
     "gRPC_Id_Description" varchar not null
 );
 
