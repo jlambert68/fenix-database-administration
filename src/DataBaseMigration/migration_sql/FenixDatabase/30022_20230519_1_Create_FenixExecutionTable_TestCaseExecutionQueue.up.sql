@@ -25,9 +25,9 @@ create table "FenixExecution"."TestCaseExecutionQueue"
             references "FenixExecution"."ExecutionPriorityEnum",
     "UniqueCounter"               serial
         unique,
-    "ExecutionStatusReportLevel " integer                  not null
-        constraint testcasesunderexecution_executionstatusreportlevelenum_grpc_id_fk
-            references "FenixExecution"."ExecutionStatusReportLevelEnum"
+    "ExecutionStatusReportLevel" integer                  not null
+        constraint testcaseexecutionqueue_executionstatusreportlevelenum_grpc_id_fk
+        references "FenixExecution"."ExecutionStatusReportLevelEnum"
 );
 
 comment on table "FenixExecution"."TestCaseExecutionQueue" is 'Holds TestCases that are waiting to be executed execution';

@@ -24,7 +24,10 @@ create table "FenixExecution"."TestInstructionExecutionQueue"
     "TestInstructionExecutionOrder"     integer                  not null,
     "UniqueCounter"                     serial
         unique,
-    "TestInstructionOriginalUuid"       uuid                     not null
+    "TestInstructionOriginalUuid"       uuid                     not null,
+    "ExecutionStatusReportLevel"                 integer                  not null
+        constraint testinstructionexecutionqueue_executionstatusreportlevelenum_grpc_id_fk
+        references "FenixExecution"."ExecutionStatusReportLevelEnum"
 );
 
 comment on table "FenixExecution"."TestInstructionExecutionQueue" is 'All TestInstructions to be sent for Execution';

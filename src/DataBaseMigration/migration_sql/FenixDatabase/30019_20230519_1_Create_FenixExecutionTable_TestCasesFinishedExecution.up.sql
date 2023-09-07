@@ -31,8 +31,8 @@ create table "FenixExecution"."TestCasesFinishedExecution"
         unique,
     "ExecutionStatusUpdateTimeStamp" timestamp with time zone,
     "ExecutionStatusReportLevel"     integer                  not null
-        constraint testcasesunderexecution_executionstatusreportlevelenum_grpc_id_fk
-            references "FenixExecution"."ExecutionStatusReportLevelEnum"
+        constraint testcasesfinishedexecution_executionstatusreportlevelenum_grpc_id_fk
+         references "FenixExecution"."ExecutionStatusReportLevelEnum"
 );
 
 comment on table "FenixExecution"."TestCasesFinishedExecution" is 'Holds all TestCases that has finished their executions, independent of outcome';

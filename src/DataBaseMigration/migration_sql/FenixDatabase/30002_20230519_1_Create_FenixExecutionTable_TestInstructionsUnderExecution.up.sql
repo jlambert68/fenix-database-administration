@@ -30,7 +30,11 @@ create table "FenixExecution"."TestInstructionsUnderExecution"
     "TestInstructionExecutionEndTimeStamp"       timestamp with time zone,
     "TestInstructionExecutionHasFinished"        boolean                  not null,
     "QueueTimeStamp"                             timestamp with time zone,
-    "ExecutionPriority"                          integer
+    "ExecutionPriority"                          integer,
+    "TestInstructionExecutionResendCounter"      int     default 0,
+    "ExecutionStatusReportLevel"                 integer                  not null
+        constraint testinstructionsunderexecution_executionstatusreportlevelenum_grpc_id_fk
+            references "FenixExecution"."ExecutionStatusReportLevelEnum"
 );
 
 comment on table "FenixExecution"."TestInstructionsUnderExecution" is 'Holds all TestInstructions sent to client system for execution';
@@ -39,3 +43,5 @@ alter table "FenixExecution"."TestInstructionsUnderExecution"
     owner to postgres;
 
 COMMIT;
+
+

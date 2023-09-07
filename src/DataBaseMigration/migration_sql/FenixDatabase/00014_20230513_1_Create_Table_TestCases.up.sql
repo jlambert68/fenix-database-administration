@@ -1,7 +1,7 @@
 	-- noinspection SqlNoDataSourceInspectionForFile
 
 BEGIN;
-	
+
 CREATE TABLE IF NOT EXISTS "FenixBuilder"."TestCases"
 (
     "DomainUuid"                       uuid,
@@ -13,8 +13,11 @@ CREATE TABLE IF NOT EXISTS "FenixBuilder"."TestCases"
     "TestInstructionsAsJsonb"          jsonb not null,
     "TestInstructionContainersAsJsonb" jsonb not null,
     "UniqueCounter"                    serial,
+    "TestCaseHash"                      varchar,
+    "TestCaseExtraInformationAsJsonb" jsonb,
     constraint testcases_pk
         unique ("TestCaseUuid", "TestCaseVersion")
+
 );
 
 comment on table "FenixBuilder"."TestCases" is 'Holds all TestCases as a JSONB-structure';
