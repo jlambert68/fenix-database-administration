@@ -1,4 +1,4 @@
-package fenix_database_administration
+package main
 
 import (
 	"fenix-database-administration/SharedCode"
