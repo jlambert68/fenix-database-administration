@@ -1,0 +1,12 @@
+INSERT INTO "FenixExecution"."TestCaseExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (1, 'TCE_INITIATED');
+INSERT INTO "FenixExecution"."TestCaseExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (2, 'TCE_EXECUTING');
+INSERT INTO "FenixExecution"."TestCaseExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (3, 'TCE_CONTROLLED_INTERRUPTION');
+INSERT INTO "FenixExecution"."TestCaseExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (4, 'TCE_CONTROLLED_INTERRUPTION_CAN_BE_RERUN');
+INSERT INTO "FenixExecution"."TestCaseExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (5, 'TCE_FINISHED_OK');
+INSERT INTO "FenixExecution"."TestCaseExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (6, 'TCE_FINISHED_OK_CAN_BE_RERUN');
+INSERT INTO "FenixExecution"."TestCaseExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (7, 'TCE_FINISHED_NOT_OK');
+INSERT INTO "FenixExecution"."TestCaseExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (8, 'TCE_FINISHED_NOT_OK_CAN_BE_RERUN');
+INSERT INTO "FenixExecution"."TestCaseExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (9, 'TCE_UNEXPECTED_INTERRUPTION');
+INSERT INTO "FenixExecution"."TestCaseExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (10, 'TCE_UNEXPECTED_INTERRUPTION_CAN_BE_RERUN');
+INSERT INTO "FenixExecution"."TestCaseExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (11, 'TCE_TIMEOUT_INTERRUPTION');
+INSERT INTO "FenixExecution"."TestCaseExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (12, 'TCE_TIMEOUT_INTERRUPTION_CAN_BE_RERUN');

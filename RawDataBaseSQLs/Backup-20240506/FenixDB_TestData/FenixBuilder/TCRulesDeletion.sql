@@ -1,0 +1,14 @@
+INSERT INTO "FenixBuilder"."TCRulesDeletion" ("DeletionRule") VALUES ('TCRuleDeletion001');
+INSERT INTO "FenixBuilder"."TCRulesDeletion" ("DeletionRule") VALUES ('TCRuleDeletion002');
+INSERT INTO "FenixBuilder"."TCRulesDeletion" ("DeletionRule") VALUES ('TCRuleDeletion004');
+INSERT INTO "FenixBuilder"."TCRulesDeletion" ("DeletionRule") VALUES ('TCRuleDeletion005');
+INSERT INTO "FenixBuilder"."TCRulesDeletion" ("DeletionRule") VALUES ('TCRuleDeletion006');
+INSERT INTO "FenixBuilder"."TCRulesDeletion" ("DeletionRule") VALUES ('TCRuleDeletion007');
+INSERT INTO "FenixBuilder"."TCRulesDeletion" ("DeletionRule") VALUES ('TCRuleDeletion008');
+INSERT INTO "FenixBuilder"."TCRulesDeletion" ("DeletionRule") VALUES ('TCRuleDeletion009');
+INSERT INTO "FenixBuilder"."TCRulesDeletion" ("DeletionRule") VALUES ('TCRuleDeletion010');
+INSERT INTO "FenixBuilder"."TCRulesDeletion" ("DeletionRule") VALUES ('TCRuleDeletion011');
+INSERT INTO "FenixBuilder"."TCRulesDeletion" ("DeletionRule") VALUES ('TCRuleDeletion012');
+INSERT INTO "FenixBuilder"."TCRulesDeletion" ("DeletionRule") VALUES ('TCRuleDeletion013');
+INSERT INTO "FenixBuilder"."TCRulesDeletion" ("DeletionRule") VALUES ('TCRuleDeletion003');
+INSERT INTO "FenixBuilder"."TCRulesDeletion" ("DeletionRule") VALUES ('TCRuleDeletion020');

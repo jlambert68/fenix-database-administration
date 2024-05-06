@@ -1,0 +1,12 @@
+INSERT INTO "FenixExecution"."TestInstructionExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (1, 'TIE_INITIATED');
+INSERT INTO "FenixExecution"."TestInstructionExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (2, 'TIE_EXECUTING');
+INSERT INTO "FenixExecution"."TestInstructionExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (3, 'TIE_CONTROLLED_INTERRUPTION');
+INSERT INTO "FenixExecution"."TestInstructionExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (4, 'TIE_CONTROLLED_INTERRUPTION_CAN_BE_RERUN');
+INSERT INTO "FenixExecution"."TestInstructionExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (5, 'TIE_FINISHED_OK');
+INSERT INTO "FenixExecution"."TestInstructionExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (6, 'TIE_FINISHED_OK_CAN_BE_RERUN');
+INSERT INTO "FenixExecution"."TestInstructionExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (7, 'TIE_FINISHED_NOT_OK');
+INSERT INTO "FenixExecution"."TestInstructionExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (8, 'TIE_FINISHED_NOT_OK_CAN_BE_RERUN');
+INSERT INTO "FenixExecution"."TestInstructionExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (9, 'TIE_UNEXPECTED_INTERRUPTION');
+INSERT INTO "FenixExecution"."TestInstructionExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (10, 'TIE_UNEXPECTED_INTERRUPTION_CAN_BE_RERUN');
+INSERT INTO "FenixExecution"."TestInstructionExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (11, 'TIE_TIMEOUT_INTERRUPTION');
+INSERT INTO "FenixExecution"."TestInstructionExecutionStatusEnum" ("gRPC_Id", "gRPC_Name") VALUES (12, 'TIE_TIMEOUT_INTERRUPTION_CAN_BE_RERUN');
