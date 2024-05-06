@@ -3,6 +3,6 @@
 BEGIN;
 
 -- Remove all data in Table "FenixDomainAdministration".domains
-DELETE FROM "FenixDomainAdministration"."domains";
+DELETE FROM "FenixDomainAdministration"."domainbitpositionenum";
 
 COMMIT;

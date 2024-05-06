@@ -3,6 +3,6 @@
 BEGIN;
 
 -- Delete the Domains-table
-DROP TABLE IF EXISTS "FenixDomainAdministration"."domains";
+DROP TABLE IF EXISTS "FenixDomainAdministration"."allowedusers";
 
 COMMIT ;

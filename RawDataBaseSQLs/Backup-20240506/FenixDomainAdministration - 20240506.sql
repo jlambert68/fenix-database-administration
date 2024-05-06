@@ -1,5 +1,5 @@
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table domainbitpositionenum
 (
     bitnumbername  varchar not null
@@ -12,7 +12,7 @@ alter table domainbitpositionenum
     owner to postgres;
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table domains
 (
     domain_uuid                                                   uuid      not null
@@ -46,7 +46,7 @@ alter table domains
 grant delete, insert, select, update on domains to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table allowedusers
 (
     uniqueidhash                                               varchar not null
