@@ -9,7 +9,7 @@ create table "FenixExecution"."TestInstructionsUnderExecution"
     "TestInstructionExecutionUuid"               uuid                     not null
         constraint "SentTestInstructionsForExecution_pkey"
             primary key,
-    "TestInstructionUuid"                        uuid                     not null,
+    "MatureTestInstructionUuid"                  uuid                     not null,
     "TestInstructionName"                        varchar                  not null,
     "TestInstructionMajorVersionNumber"          integer                  not null,
     "TestInstructionMinorVersionNumber"          integer                  not null,
@@ -31,10 +31,12 @@ create table "FenixExecution"."TestInstructionsUnderExecution"
     "TestInstructionExecutionHasFinished"        boolean                  not null,
     "QueueTimeStamp"                             timestamp with time zone,
     "ExecutionPriority"                          integer,
-    "TestInstructionExecutionResendCounter"      int     default 0,
+    "TestInstructionExecutionResendCounter"      integer default 0,
     "ExecutionStatusReportLevel"                 integer                  not null
-        constraint testinstructionsunderexecution_executionstatusreportlevelenum_grpc_id_fk
-            references "FenixExecution"."ExecutionStatusReportLevelEnum"
+        constraint testinstructionsunderexecution_executionstatusreportlevelenum_g
+            references "FenixExecution"."ExecutionStatusReportLevelEnum",
+    "ExecutionDomainUuid"                        uuid                     not null,
+    "ExecutionDomainName"                        varchar                  not null
 );
 
 comment on table "FenixExecution"."TestInstructionsUnderExecution" is 'Holds all TestInstructions sent to client system for execution';

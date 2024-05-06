@@ -28,9 +28,9 @@ CREATE TABLE IF NOT EXISTS "FenixDomainAdministration"."domainbitpositionenum"
     "AllUsersCanBuildAndSaveTestCaseHavingTIandTICFromThisDomain" boolean   not null
 );
 
-comment on table domains is 'Domains that can call Fenix';
+comment on table domainbitpositionenum is 'Domains that can call Fenix';
 
-alter table "FenixDomainAdministration".domains
+alter table "FenixDomainAdministration".domainbitpositionenum
     owner to postgres;
 
 COMMIT ;

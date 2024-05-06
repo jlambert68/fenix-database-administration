@@ -1,5 +1,5 @@
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestCaseExecutionStatusEnum"
 (
     "gRPC_Id"   integer not null
@@ -16,7 +16,7 @@ alter table "TestCaseExecutionStatusEnum"
 grant delete, insert, select, update on "TestCaseExecutionStatusEnum" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "ExecutionStatusReportLevelEnum"
 (
     "gRPC_Id"             integer not null
@@ -32,7 +32,7 @@ alter table "ExecutionStatusReportLevelEnum"
 grant delete, insert, select, update on "ExecutionStatusReportLevelEnum" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestInstructionsUnderExecution"
 (
     "DomainUuid"                                 uuid                     not null,
@@ -80,7 +80,7 @@ grant select, usage on sequence "TestInstructionsUnderExecution_UniqueCounter_se
 grant delete, insert, select, update on "TestInstructionsUnderExecution" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestInstructionAttributesUnderExecution"
 (
     "TestInstructionExecutionUuid"     uuid    not null,
@@ -103,7 +103,7 @@ alter table "TestInstructionAttributesUnderExecution"
 grant delete, insert, select, update on "TestInstructionAttributesUnderExecution" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestInstructionExecutionStatusEnum"
 (
     "gRPC_Id"   integer not null
@@ -120,7 +120,7 @@ alter table "TestInstructionExecutionStatusEnum"
 grant delete, insert, select, update on "TestInstructionExecutionStatusEnum" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "ProcessingCapabilityForClientSystemEnum"
 (
     "gRPC_Id"   integer not null
@@ -137,7 +137,7 @@ alter table "ProcessingCapabilityForClientSystemEnum"
 grant delete, insert, select, update on "ProcessingCapabilityForClientSystemEnum" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "ProcessingCapabilityForClientSystem"
 (
     "DomainUuid"                          uuid      not null
@@ -157,7 +157,7 @@ alter table "ProcessingCapabilityForClientSystem"
 grant delete, insert, select, update on "ProcessingCapabilityForClientSystem" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "LogPostStatusEnum"
 (
     "gRPC_Id"   integer not null
@@ -174,7 +174,7 @@ alter table "LogPostStatusEnum"
 grant delete, insert, select, update on "LogPostStatusEnum" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestInstructionAttributeTypeEnum"
 (
     "gRPC_Id"   integer not null
@@ -191,7 +191,7 @@ alter table "TestInstructionAttributeTypeEnum"
 grant delete, insert, select, update on "TestInstructionAttributeTypeEnum" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "ExecutionPriorityEnum"
 (
     "PriorityId"          integer not null
@@ -208,7 +208,7 @@ alter table "ExecutionPriorityEnum"
 grant delete, insert, select, update on "ExecutionPriorityEnum" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestInstructionExecutionQueue"
 (
     "DomainUuid"                        uuid                     not null,
@@ -248,7 +248,7 @@ grant select, usage on sequence "TestInstructionExecutionQueue_UniqueCounter_seq
 grant delete, insert, select, update on "TestInstructionExecutionQueue" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestCaseExecutionTestData"
 (
     "TestCaseExecutionUuid"                   uuid    not null,
@@ -266,7 +266,7 @@ alter table "TestCaseExecutionTestData"
 grant delete, insert, select, update on "TestCaseExecutionTestData" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "LatestTestSuiteAndTestCaseExecutionVersions"
 (
     "TestSuiteExecutionUuid"    uuid    not null,
@@ -283,7 +283,7 @@ alter table "LatestTestSuiteAndTestCaseExecutionVersions"
 grant delete, insert, select, update on "LatestTestSuiteAndTestCaseExecutionVersions" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestCasesUnderExecution"
 (
     "DomainUuid"                     uuid                     not null,
@@ -327,7 +327,7 @@ grant select, usage on sequence "TestCasesUnderExecution_UniqueCounter_seq" to "
 grant delete, insert, select, update on "TestCasesUnderExecution" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestCasesFinishedExecution"
 (
     "DomainUuid"                     uuid                     not null,
@@ -371,7 +371,7 @@ grant select, usage on sequence "TestCasesFinishedExecution_UniqueCounter_seq" t
 grant delete, insert, select, update on "TestCasesFinishedExecution" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "DomainParameters"
 (
     "DomainUuid"              uuid    not null
@@ -389,7 +389,7 @@ alter table "DomainParameters"
 grant delete, insert, select, update on "DomainParameters" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestInstructionExecutionMessagesReceivedByWrongExecutionInstanc"
 (
     "ApplicationExecutionRuntimeUuid" uuid,
@@ -408,7 +408,7 @@ alter table "TestInstructionExecutionMessagesReceivedByWrongExecutionInstanc"
 grant delete, insert, select, update on "TestInstructionExecutionMessagesReceivedByWrongExecutionInstanc" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestCaseExecutionQueue"
 (
     "DomainUuid"                 uuid                     not null,
@@ -445,7 +445,7 @@ grant select, usage on sequence "TestCaseExecutionQueue_UniqueCounter_seq" to "f
 grant delete, insert, select, update on "TestCaseExecutionQueue" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "ResponseVariablesFinishedExecution"
 (
     "Identifier"                      uuid      not null
@@ -466,7 +466,7 @@ alter table "ResponseVariablesFinishedExecution"
     owner to postgres;
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "ExecutionLogPosts"
 (
     "DomainUuid"                      uuid      not null,
@@ -495,7 +495,7 @@ alter table "ExecutionLogPosts"
 grant delete, insert, select, update on "ExecutionLogPosts" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "ResponseVariablesUnderExecution"
 (
     "UniqueUuid"                      uuid      not null

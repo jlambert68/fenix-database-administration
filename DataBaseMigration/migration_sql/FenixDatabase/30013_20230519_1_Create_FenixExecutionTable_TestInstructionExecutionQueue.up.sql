@@ -9,7 +9,7 @@ create table "FenixExecution"."TestInstructionExecutionQueue"
     "DomainName"                        varchar                  not null,
     "TestInstructionExecutionUuid"      uuid                     not null
         primary key,
-    "TestInstructionUuid"               uuid                     not null,
+    "MatureTestInstructionUuid"         uuid                     not null,
     "TestInstructionName"               varchar                  not null,
     "TestInstructionMajorVersionNumber" integer                  not null,
     "TestInstructionMinorVersionNumber" integer                  not null,
@@ -25,9 +25,11 @@ create table "FenixExecution"."TestInstructionExecutionQueue"
     "UniqueCounter"                     serial
         unique,
     "TestInstructionOriginalUuid"       uuid                     not null,
-    "ExecutionStatusReportLevel"                 integer                  not null
-        constraint testinstructionexecutionqueue_executionstatusreportlevelenum_grpc_id_fk
-        references "FenixExecution"."ExecutionStatusReportLevelEnum"
+    "ExecutionStatusReportLevel"        integer                  not null
+        constraint testinstructionexecutionqueue_executionstatusreportlevelenum_gr
+            references "FenixExecution"."ExecutionStatusReportLevelEnum",
+    "ExecutionDomainUuid"               uuid                     not null,
+    "ExecutionDomainName"               varchar                  not null
 );
 
 comment on table "FenixExecution"."TestInstructionExecutionQueue" is 'All TestInstructions to be sent for Execution';

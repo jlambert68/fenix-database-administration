@@ -1,5 +1,5 @@
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestContainerChildType"
 (
     "TestInstructionContainerChildType"        integer not null
@@ -16,7 +16,7 @@ alter table "TestContainerChildType"
 grant delete, insert, select, update on "TestContainerChildType" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TCRulesDeletion"
 (
     "DeletionRule" varchar not null
@@ -32,7 +32,7 @@ alter table "TCRulesDeletion"
 grant delete, insert, select, update on "TCRulesDeletion" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestInstructions"
 (
     "DomainUuid"                   uuid      not null
@@ -62,7 +62,7 @@ alter table "TestInstructions"
 grant delete, insert, select, update on "TestInstructions" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TCRuleSwap"
 (
     "SwapRule" varchar not null
@@ -78,7 +78,7 @@ alter table "TCRuleSwap"
 grant delete, insert, select, update on "TCRuleSwap" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestInstructionAttributeTypes"
 (
     "TestInstructionAttributeType" varchar not null
@@ -94,7 +94,7 @@ alter table "TestInstructionAttributeTypes"
 grant delete, insert, select, update on "TestInstructionAttributeTypes" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestCaseModelElementTypes"
 (
     "TestCaseModelElementType"            varchar not null
@@ -112,7 +112,7 @@ alter table "TestCaseModelElementTypes"
 grant delete, insert, select, update on "TestCaseModelElementTypes" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestInstructionContainerExecutionTypes"
 (
     "TestInstructionContainerExecutionType" varchar not null
@@ -129,7 +129,7 @@ alter table "TestInstructionContainerExecutionTypes"
 grant delete, insert, select, update on "TestInstructionContainerExecutionTypes" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "AttributeActionCommandEnum"
 (
     "gRPC_Id"   integer not null
@@ -146,7 +146,7 @@ alter table "AttributeActionCommandEnum"
 grant delete, insert, select, update on "AttributeActionCommandEnum" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestCases"
 (
     "DomainUuid"                                                      uuid,
@@ -177,7 +177,7 @@ grant select, usage on sequence "TestCases_UniqueCounter_seq" to "fenix-cloudrun
 grant delete, insert, select, update on "TestCases" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestInstructionContainers"
 (
     "DomainUuid"                            uuid      not null,
@@ -204,7 +204,7 @@ alter table "TestInstructionContainers"
 grant delete, insert, select, update on "TestInstructionContainers" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "BasicTestInstructionInformation"
 (
     "DomainUuid"                   uuid      not null,
@@ -239,7 +239,7 @@ alter table "BasicTestInstructionInformation"
 grant delete, insert, select, update on "BasicTestInstructionInformation" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "ImmatureBonds"
 (
     "BondUuid"                              uuid      not null
@@ -274,7 +274,7 @@ alter table "ImmatureBonds"
 grant delete, insert, select, update on "ImmatureBonds" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "BasicTestInstructionContainerInformation"
 (
     "DomainUuid"                            uuid      not null,
@@ -312,7 +312,7 @@ alter table "BasicTestInstructionContainerInformation"
 grant delete, insert, select, update on "BasicTestInstructionContainerInformation" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestInstructionAttributes"
 (
     "DomainUuid"                                    uuid    not null,
@@ -347,7 +347,7 @@ alter table "TestInstructionAttributes"
 grant delete, insert, select, update on "TestInstructionAttributes" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "ImmatureElementModelMessage"
 (
     "DomainUuid"               uuid    not null,
@@ -374,7 +374,7 @@ alter table "ImmatureElementModelMessage"
 grant delete, insert, select, update on "ImmatureElementModelMessage" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "TestInstructionContainerChildren"
 (
     "TestIntructionContainer" uuid    not null
@@ -394,7 +394,7 @@ alter table "TestInstructionContainerChildren"
 grant delete, insert, select, update on "TestInstructionContainerChildren" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "PinnedTestInstructionsAndPreCreatedTestInstructionContainers"
 (
     "UserId"     varchar   not null,
@@ -416,7 +416,7 @@ alter table "PinnedTestInstructionsAndPreCreatedTestInstructionContainers"
 grant delete, insert, select, update on "PinnedTestInstructionsAndPreCreatedTestInstructionContainers" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "ImmatureTestInstructionContainerMessage"
 (
     "DomainUuid"                   uuid    not null,
@@ -450,7 +450,7 @@ alter table "ImmatureTestInstructionContainerMessage"
 grant delete, insert, select, update on "ImmatureTestInstructionContainerMessage" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "ImmatureTestInstructionInformation"
 (
     "DomainUuid"                   uuid    not null,
@@ -487,7 +487,7 @@ alter table "ImmatureTestInstructionInformation"
 grant delete, insert, select, update on "ImmatureTestInstructionInformation" to "fenix-cloudrun-dbuser";
 
 -- *******************************************************************************************************************
-NOT CHECKED
+-- CHECKED
 create table "SupportedTIAndTICAndAllowedUsers"
 (
     domainuuid                                                 uuid      not null
