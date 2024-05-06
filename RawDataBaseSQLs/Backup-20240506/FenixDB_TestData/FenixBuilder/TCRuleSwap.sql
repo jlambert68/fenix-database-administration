@@ -1,13 +1,14 @@
-INSERT INTO "FenixBuilder"."TCRuleSwap" ("SwapRule") VALUES ('TCRuleSwap001');
-INSERT INTO "FenixBuilder"."TCRuleSwap" ("SwapRule") VALUES ('TCRuleSwap002');
-INSERT INTO "FenixBuilder"."TCRuleSwap" ("SwapRule") VALUES ('TCRuleSwap003');
-INSERT INTO "FenixBuilder"."TCRuleSwap" ("SwapRule") VALUES ('TCRuleSwap004');
-INSERT INTO "FenixBuilder"."TCRuleSwap" ("SwapRule") VALUES ('TCRuleSwap005');
-INSERT INTO "FenixBuilder"."TCRuleSwap" ("SwapRule") VALUES ('TCRuleSwap006');
-INSERT INTO "FenixBuilder"."TCRuleSwap" ("SwapRule") VALUES ('TCRuleSwap007');
-INSERT INTO "FenixBuilder"."TCRuleSwap" ("SwapRule") VALUES ('TCRuleSwap008');
-INSERT INTO "FenixBuilder"."TCRuleSwap" ("SwapRule") VALUES ('TCRuleSwap009');
-INSERT INTO "FenixBuilder"."TCRuleSwap" ("SwapRule") VALUES ('TCRuleSwap010');
-INSERT INTO "FenixBuilder"."TCRuleSwap" ("SwapRule") VALUES ('TCRuleSwap011');
-INSERT INTO "FenixBuilder"."TCRuleSwap" ("SwapRule") VALUES ('TCRuleSwap012');
-INSERT INTO "FenixBuilder"."TCRuleSwap" ("SwapRule") VALUES ('TCRuleSwap020');
+insert into FenixBuilder.TCRuleSwap (SwapRule)
+values  ('TCRuleSwap001'),
+        ('TCRuleSwap002'),
+        ('TCRuleSwap003'),
+        ('TCRuleSwap004'),
+        ('TCRuleSwap005'),
+        ('TCRuleSwap006'),
+        ('TCRuleSwap007'),
+        ('TCRuleSwap008'),
+        ('TCRuleSwap009'),
+        ('TCRuleSwap010'),
+        ('TCRuleSwap011'),
+        ('TCRuleSwap012'),
+        ('TCRuleSwap020');

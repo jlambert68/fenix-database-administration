@@ -1,2 +1,3 @@
-INSERT INTO "FenixBuilder"."TestInstructionContainerExecutionTypes" ("TestInstructionContainerExecutionType", "GrpcMapping") VALUES ('PARALLELLED_PROCESSED', 1);
-INSERT INTO "FenixBuilder"."TestInstructionContainerExecutionTypes" ("TestInstructionContainerExecutionType", "GrpcMapping") VALUES ('SERIAL_PROCESSED', 2);
+insert into FenixBuilder.TestInstructionContainerExecutionTypes (TestInstructionContainerExecutionType, GrpcMapping)
+values  ('PARALLELLED_PROCESSED', 1),
+        ('SERIAL_PROCESSED', 2);

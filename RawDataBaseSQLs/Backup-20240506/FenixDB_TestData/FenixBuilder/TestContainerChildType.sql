@@ -1,2 +1,3 @@
-INSERT INTO "FenixBuilder"."TestContainerChildType" ("TestInstructionContainerChildType", "TestInstructionContainerChildDescription") VALUES (1, 'TestInstruction');
-INSERT INTO "FenixBuilder"."TestContainerChildType" ("TestInstructionContainerChildType", "TestInstructionContainerChildDescription") VALUES (2, 'TestContainer');
+insert into FenixBuilder.TestContainerChildType (TestInstructionContainerChildType, TestInstructionContainerChildDescription)
+values  (1, 'TestInstruction'),
+        (2, 'TestContainer');
