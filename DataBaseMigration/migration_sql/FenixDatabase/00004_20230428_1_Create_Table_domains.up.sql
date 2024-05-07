@@ -23,12 +23,12 @@ CREATE TABLE IF NOT EXISTS "FenixDomainAdministration"."domains"
         constraint domains_pk_3
             unique
         constraint domains_domainbitpositionenum_bitnumbername_fk
-            references domainbitpositionenum,
+            references "FenixDomainAdministration".domainbitpositionenum,
     "AllUsersCanListAndViewTestCaseHavingTIandTICFromThisDomain"  boolean   not null,
     "AllUsersCanBuildAndSaveTestCaseHavingTIandTICFromThisDomain" boolean   not null
 );
 
-comment on table domains is 'Domains that can call Fenix';
+comment on table "FenixDomainAdministration".domains is 'Domains that can call Fenix';
 
 alter table "FenixDomainAdministration".domains
     owner to postgres;

@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS "FenixDomainAdministration"."allowedusers"
             primary key,
     domainuuid                                                 uuid    not null
         constraint allowedusers_domains_domain_uuid_fk
-            references domains,
+            references "FenixDomainAdministration".domains,
     domainname                                                 varchar not null,
     useridoncomputer                                           varchar not null,
     gcpauthenticateduser                                       varchar not null,
