@@ -18,6 +18,8 @@ CREATE TABLE IF NOT EXISTS "FenixBuilder"."TestCases"
     "CanListAndViewTestCaseAuthorizationLevelOwnedByDomain"           bigint,
     "CanListAndViewTestCaseAuthorizationLevelHavingTiAndTicWithDomai" bigint,
     "TestCaseIsDeleted"                                               boolean,
+    "TestCaseTemplateFilesAsJsonb"                                    jsonb,
+    "InsertTimeStamp"                                                 timestamp,
     constraint testcases_pk
         unique ("TestCaseUuid", "TestCaseVersion")
 );
@@ -29,5 +31,4 @@ alter table "FenixBuilder"."TestCases"
     owner to postgres;
 
 COMMIT;
-	
 
