@@ -3,6 +3,6 @@
 BEGIN;
 
 -- Remove all data in Table
-DELETE FROM "FenixBuilder"."TestDataFromSimpleTestDataAreaFile";
+DELETE FROM "FenixBuilder"."TemplateRepositoryConnectionParameters";
 
 COMMIT;
