@@ -17,10 +17,8 @@ CREATE TABLE IF NOT EXISTS "FenixDomainAdministration"."domains"
     domain_id                                                     integer   not null,
     domain_version                                                integer   not null,
     workeraddress                                                 varchar   not null
-        constraint domains_pk_2
-            unique,
     bitnumbername                                                 varchar
-        constraint domains_pk_3
+        constraint domains_pk_2
             unique
         constraint domains_domainbitpositionenum_bitnumbername_fk
             references "FenixDomainAdministration".domainbitpositionenum,
