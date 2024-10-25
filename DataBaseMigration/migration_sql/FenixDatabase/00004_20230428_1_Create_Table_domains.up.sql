@@ -16,15 +16,15 @@ CREATE TABLE IF NOT EXISTS "FenixDomainAdministration"."domains"
     replaced_by_new_version                                       boolean   not null,
     domain_id                                                     integer   not null,
     domain_version                                                integer   not null,
-    workeraddress                                                 varchar   not null
-    bitnumbername                                                 varchar
+    workeraddress                                                 varchar   not null,
+    bitnumbername                                                 varchar  not null
         constraint domains_pk_2
             unique
         constraint domains_domainbitpositionenum_bitnumbername_fk
             references "FenixDomainAdministration".domainbitpositionenum,
     "AllUsersCanListAndViewTestCaseHavingTIandTICFromThisDomain"  boolean   not null,
     "AllUsersCanBuildAndSaveTestCaseHavingTIandTICFromThisDomain" boolean   not null,
-    "PublicKey"                                                   varchar
+    "PublicKey"                                                   varchar  not null
 );
 
 comment on table "FenixDomainAdministration".domains is 'Domains that can call Fenix';
