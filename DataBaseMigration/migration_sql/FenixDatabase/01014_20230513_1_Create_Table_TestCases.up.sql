@@ -20,8 +20,12 @@ CREATE TABLE IF NOT EXISTS "FenixBuilder"."TestCases"
     "TestCaseIsDeleted"                                               boolean,
     "TestCaseTemplateFilesAsJsonb"                                    jsonb,
     "InsertTimeStamp"                                                 timestamp,
+    "TestCasePreview"                                                 jsonb,
+    "DeleteTimestamp"                                                 timestamp default '2068-11-18 00:00:00'::timestamp without time zone,
+    "DeletedInsertedTImeStamp"                                        timestamp,
+    "DeletedByGCPAuthenticatedUser"                                   varchar,
     constraint testcases_pk
-        unique ("TestCaseUuid", "TestCaseVersion")
+        unique ("TestCaseUuid", "TestCaseVersion", "TestCaseIsDeleted")
 );
 
 
@@ -31,4 +35,6 @@ alter table "FenixBuilder"."TestCases"
     owner to postgres;
 
 COMMIT;
+
+
 

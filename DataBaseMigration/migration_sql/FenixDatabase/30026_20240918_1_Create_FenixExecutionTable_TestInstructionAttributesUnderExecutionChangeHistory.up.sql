@@ -12,8 +12,6 @@ create table "FenixExecution"."TestInstructionAttributesUnderExecutionChangeHist
     "AttributeValueUuid"               uuid,
     "TestInstructionAttributeTypeUuid" uuid    not null,
     "TestInstructionAttributeTypeName" varchar not null,
-    constraint senttestinstructionattributesforexecutionchangehistory_pk
-        unique ("TestInstructionExecutionUuid", "TestInstructionAttributeUuid"),
     "TestInstructionExecutionVersion"  integer not null
 );
 

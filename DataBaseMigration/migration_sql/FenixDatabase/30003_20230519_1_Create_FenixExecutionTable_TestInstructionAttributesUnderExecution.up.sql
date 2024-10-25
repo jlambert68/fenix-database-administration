@@ -13,7 +13,8 @@ create table "FenixExecution"."TestInstructionAttributesUnderExecution"
     "TestInstructionAttributeTypeUuid" uuid    not null,
     "TestInstructionAttributeTypeName" varchar not null,
     constraint senttestinstructionattributesforexecution_pk
-        unique ("TestInstructionExecutionUuid", "TestInstructionAttributeUuid")
+        unique ("TestInstructionExecutionUuid", "TestInstructionExecutionVersion", "TestInstructionAttributeUuid"),
+    "TestInstructionExecutionVersion"  integer not null
 );
 
 comment on table "FenixExecution"."TestInstructionAttributesUnderExecution" is 'Holds all attributes that is sent for execution ';
