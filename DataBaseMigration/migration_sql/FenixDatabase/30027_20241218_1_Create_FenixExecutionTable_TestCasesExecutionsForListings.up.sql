@@ -33,8 +33,8 @@ create table if not exists "FenixExecution"."TestCasesExecutionsForListings"
     "ExecutionStatusReportLevel"     integer                  not null
         constraint testcasesunderexecution_executionstatusreportlevelenum_grpc_id_
             references "FenixExecution"."ExecutionStatusReportLevelEnum",
-    "TestCasePreview" jsonb not null,
-    "ExecutionStatusPreviewValue" jsonb not null,
+    "TestCasePreview"                jsonb default '{}'::jsonb not null,
+    "ExecutionStatusPreviewValue"    jsonb default '{}'::jsonb not null,
     "UniqueExecutionCounter"                 serial
         unique
 );
@@ -47,4 +47,3 @@ alter table "FenixExecution"."TestCasesExecutionsForListings"
 
 
 COMMIT;
-
