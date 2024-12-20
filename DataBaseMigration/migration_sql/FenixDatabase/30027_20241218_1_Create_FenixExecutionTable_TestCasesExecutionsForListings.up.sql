@@ -34,7 +34,7 @@ create table if not exists "FenixExecution"."TestCasesExecutionsForListings"
         constraint testcasesunderexecution_executionstatusreportlevelenum_grpc_id_
             references "FenixExecution"."ExecutionStatusReportLevelEnum",
     "TestCasePreview"                jsonb default '{}'::jsonb not null,
-    "ExecutionStatusPreviewValues"    jsonb default '{}'::jsonb not null,
+    "TestInstructionsExecutionStatusPreviewValues"    jsonb default '{}'::jsonb not null,
     "UniqueExecutionCounter"                 serial
         unique
 );
