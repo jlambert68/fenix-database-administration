@@ -15,7 +15,7 @@ create table "FenixExecution"."TestInstructionsUnderExecution"
     "TestInstructionMinorVersionNumber"          integer                  not null,
     "SentTimeStamp"                              timestamp with time zone not null,
     "ExpectedExecutionDuration"                  timestamp with time zone,
-    "ExpectedExecutionEndTimeStamp"              timestamp with time zone,
+    "ExpectedExecutionEndTimeStamp"              timestamp with time zone default '1970-01-01 00:00:00+00'::timestamp with time zone,
     "TestInstructionExecutionStatus"             integer                  not null,
     "ExecutionStatusUpdateTimeStamp"             timestamp with time zone not null,
     "TestDataSetUuid"                            uuid                     not null,
