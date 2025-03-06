@@ -12,7 +12,9 @@ create table "FenixExecution"."TestInstructionAttributesUnderExecutionChangeHist
     "AttributeValueUuid"               uuid,
     "TestInstructionAttributeTypeUuid" uuid    not null,
     "TestInstructionAttributeTypeName" varchar not null,
-    "TestInstructionExecutionVersion"  integer not null
+    "TestInstructionExecutionVersion"  integer not null,
+    "UpdateTimeStamp"                 timestamp with time zone default now(),
+    "UniqueId"                         serial
 );
 
 comment on table "FenixExecution"."TestInstructionAttributesUnderExecutionChangeHistory" is 'Holds all change history for attributes that is changed by ExecutionEngine and then sent for execution ';

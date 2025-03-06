@@ -12,9 +12,11 @@ create table "FenixExecution"."TestInstructionAttributesUnderExecution"
     "AttributeValueUuid"               uuid,
     "TestInstructionAttributeTypeUuid" uuid    not null,
     "TestInstructionAttributeTypeName" varchar not null,
+    "TestInstructionExecutionVersion"  integer not null,
+    "UpdateTimeStamp"                 timestamp with time zone default now(),
+    "UniqueId"                         serial,
     constraint senttestinstructionattributesforexecution_pk
-        unique ("TestInstructionExecutionUuid", "TestInstructionExecutionVersion", "TestInstructionAttributeUuid"),
-    "TestInstructionExecutionVersion"  integer not null
+        unique ("TestInstructionExecutionUuid", "TestInstructionExecutionVersion", "TestInstructionAttributeUuid")
 );
 
 comment on table "FenixExecution"."TestInstructionAttributesUnderExecution" is 'Holds all attributes that is sent for execution ';
@@ -23,3 +25,4 @@ alter table "FenixExecution"."TestInstructionAttributesUnderExecution"
     owner to postgres;
 
 COMMIT;
+
