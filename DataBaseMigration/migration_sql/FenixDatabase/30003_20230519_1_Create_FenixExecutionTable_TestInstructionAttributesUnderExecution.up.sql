@@ -12,11 +12,13 @@ create table "FenixExecution"."TestInstructionAttributesUnderExecution"
     "AttributeValueUuid"               uuid,
     "TestInstructionAttributeTypeUuid" uuid    not null,
     "TestInstructionAttributeTypeName" varchar not null,
-    "TestInstructionExecutionVersion"  integer not null,
-    "UpdateTimeStamp"                 timestamp with time zone default now(),
-    "UniqueId"                         serial,
+    "TestInstructionExecutionVersion"  integer,
+    "UpdateTimeStamp"                  timestamp with time zone default now(),
+    "TestCaseExecutionUuid"            uuid not null,
+    "TestInstructionName"              varchar not null,
+    "UniqueId"                         serial not null,
     constraint senttestinstructionattributesforexecution_pk
-        unique ("TestInstructionExecutionUuid", "TestInstructionExecutionVersion", "TestInstructionAttributeUuid")
+        unique ("TestInstructionExecutionUuid", "TestInstructionAttributeUuid")
 );
 
 comment on table "FenixExecution"."TestInstructionAttributesUnderExecution" is 'Holds all attributes that is sent for execution ';
