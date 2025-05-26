@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS "FenixBuilder"."TestCases"
     "DeleteTimestamp"                                                 timestamp default '2068-11-18 00:00:00'::timestamp without time zone,
     "DeletedInsertedTImeStamp"                                        timestamp,
     "DeletedByGCPAuthenticatedUser"                                   varchar,
+    "TestCaseMetaData"                                                 jsonb,
     constraint testcases_pk
         unique ("TestCaseUuid", "TestCaseVersion", "TestCaseIsDeleted")
 );
