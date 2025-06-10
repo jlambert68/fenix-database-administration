@@ -3,6 +3,6 @@
 BEGIN;
 
 -- Remove all data in Table
-DELETE FROM "FenixBuilder"."SupportedTestCaseMetaData";
+DELETE FROM "FenixBuilder"."SupportedTestCaseAndTestSuiteMetaData";
 
 COMMIT;

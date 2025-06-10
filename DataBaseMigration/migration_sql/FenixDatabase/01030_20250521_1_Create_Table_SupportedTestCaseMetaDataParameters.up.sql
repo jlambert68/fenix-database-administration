@@ -2,7 +2,7 @@
 
 BEGIN;
 
-create table "FenixBuilder"."SupportedTestCaseMetaData"
+create table "FenixBuilder"."SupportedTestCaseAndTestSuiteMetaData"
 (
     "DomainUuid"                uuid    not null
         constraint supportedtestcasemetadata_pk
@@ -11,7 +11,8 @@ create table "FenixBuilder"."SupportedTestCaseMetaData"
             references "FenixDomainAdministration".domains,
     "DomainName"                varchar not null,
     "SupportedTestCaseMetaData" jsonb   not null,
-    "UpdateTimeStamp"           timestamp
+    "UpdateTimeStamp"           timestamp,
+    "SupportedTestSuiteMetaData" jsonb   not null
 );
 
 comment on table "FenixBuilder"."SupportedTestCaseMetaData" is 'Holds all metadata that can be used for TestCases for each Domain';
