@@ -15,7 +15,7 @@ create table "FenixBuilder"."SupportedTestCaseAndTestSuiteMetaData"
     "SupportedTestSuiteMetaData" jsonb   not null
 );
 
-comment on table "FenixBuilder"."SupportedTestCaseMetaData" is 'Holds all metadata that can be used for TestCases for each Domain';
+comment on table "FenixBuilder"."SupportedTestCaseMetaData" is 'Holds all metadata that can be used for TestCases and TestSuites for each Domain';
 
 alter table "FenixBuilder"."SupportedTestCaseMetaData"
     owner to postgres;
