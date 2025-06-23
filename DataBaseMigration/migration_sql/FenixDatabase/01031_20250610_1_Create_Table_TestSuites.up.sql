@@ -17,10 +17,13 @@ create table "FenixBuilder"."TestSuites"
     "DeleteTimestamp"                                             timestamp default '2068-11-18 00:00:00'::timestamp without time zone,
     "DeletedInsertedTImeStamp"                                    timestamp,
     "DeletedByGCPAuthenticatedUser"                               varchar,
-    "TestCasesInTestSuite"                                        jsonb not null,
-    "TestSuitePreview"                                            jsonb not null,
-    "TestSuiteMetaData"                                           jsonb not null,
+    "TestCasesInTestSuite"                                        jsonb   not null,
+    "TestSuitePreview"                                            jsonb   not null,
+    "TestSuiteMetaData"                                           jsonb   not null,
     "UniqueCounter"                                               serial,
+    "DeletedByUserIdOnComputer"                                   varchar not null,
+    "InsertedByUserIdOnComputer"                                  varchar not null,
+    "InsertedByGCPAuthenticatedUser"                              varchar not null,
     constraint testsuites_pk
         unique ("TestSuiteUuid", "TestSuiteVersion", "TestSuiteIsDeleted")
 );
