@@ -24,8 +24,9 @@ create table "FenixBuilder"."TestSuites"
     "TestSuiteMetaData"                                           jsonb     not null,
     "TestSuiteTestData"                                           jsonb     not null,
     "UniqueCounter"                                               serial,
-    "TestSuiteType"                                               int8 not null ,
-    "TestSuiteTypeName"                                           varchar not null ,
+    "TestSuiteType"                                               int8 not null,
+    "TestSuiteTypeName"                                           varchar not null,
+    "TestSuiteDescription"                                        varchar not null,
     constraint testsuites_pk
         unique ("TestSuiteUuid", "TestSuiteVersion", "TestSuiteIsDeleted")
 );
