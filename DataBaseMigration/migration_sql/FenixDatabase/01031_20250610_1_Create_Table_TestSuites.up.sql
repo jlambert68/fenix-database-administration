@@ -27,6 +27,7 @@ create table "FenixBuilder"."TestSuites"
     "TestSuiteType"                                               int8 not null,
     "TestSuiteTypeName"                                           varchar not null,
     "TestSuiteDescription"                                        varchar not null,
+    "TestSuiteExecutionEnvironment"                               varchar,
     constraint testsuites_pk
         unique ("TestSuiteUuid", "TestSuiteVersion", "TestSuiteIsDeleted")
 );
