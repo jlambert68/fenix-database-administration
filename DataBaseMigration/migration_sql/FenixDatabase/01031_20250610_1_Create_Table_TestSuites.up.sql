@@ -23,6 +23,7 @@ create table "FenixBuilder"."TestSuites"
     "TestSuitePreview"                                            jsonb     not null,
     "TestSuiteMetaData"                                           jsonb     not null,
     "TestSuiteTestData"                                           jsonb     not null,
+    "TestSuiteImplementedFunctions"                               jsonb     not null,
     "UniqueCounter"                                               serial,
     "TestSuiteType"                                               int8 not null,
     "TestSuiteTypeName"                                           varchar not null,
