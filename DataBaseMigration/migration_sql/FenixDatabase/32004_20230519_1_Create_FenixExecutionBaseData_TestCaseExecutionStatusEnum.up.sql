@@ -1,4 +1,4 @@
-	-- noinspection SqlNoDataSourceInspectionForFile
+-- noinspection SqlNoDataSourceInspectionForFile
 
 BEGIN;
 
