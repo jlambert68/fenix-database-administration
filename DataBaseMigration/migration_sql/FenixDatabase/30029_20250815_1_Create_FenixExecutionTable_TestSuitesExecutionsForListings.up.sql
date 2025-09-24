@@ -36,7 +36,8 @@ create table "FenixExecution"."TestSuitesExecutionsForListings"
     "TestSuitePreview"                             jsonb default '{}'::jsonb not null,
     "TestInstructionsExecutionStatusPreviewValues" jsonb default '{}'::jsonb not null,
     "UniqueExecutionCounter"                       serial
-        unique
+        unique,
+    "TestCasesPreview"                             jsonb default '{}'::jsonb not null
 );
 
 comment on table "FenixExecution"."TestSuitesExecutionsForListings" is 'Holds data for TestSuiteExecutions. This data is used in list of executions';
@@ -46,3 +47,4 @@ alter table "FenixExecution"."TestSuitesExecutionsForListings"
 
 
 COMMIT;
+
