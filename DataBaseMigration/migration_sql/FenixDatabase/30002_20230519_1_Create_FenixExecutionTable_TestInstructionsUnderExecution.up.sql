@@ -36,7 +36,11 @@ create table "FenixExecution"."TestInstructionsUnderExecution"
         constraint testinstructionsunderexecution_executionstatusreportlevelenum_g
             references "FenixExecution"."ExecutionStatusReportLevelEnum",
     "ExecutionDomainUuid"                        uuid                     not null,
-    "ExecutionDomainName"                        varchar                  not null
+    "ExecutionDomainName"                        varchar                  not null,
+    "TestCaseUuid"                               uuid                     not null,
+    "TestCaseVersion"                            integer                  not null,
+    "TestCaseName"                               varchar                  not null
+
 );
 
 comment on table "FenixExecution"."TestInstructionsUnderExecution" is 'Holds all TestInstructions sent to client system for execution';

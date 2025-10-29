@@ -29,7 +29,10 @@ create table "FenixExecution"."TestInstructionExecutionQueue"
         constraint testinstructionexecutionqueue_executionstatusreportlevelenum_gr
             references "FenixExecution"."ExecutionStatusReportLevelEnum",
     "ExecutionDomainUuid"               uuid                     not null,
-    "ExecutionDomainName"               varchar                  not null
+    "ExecutionDomainName"               varchar                  not null,
+    "TestCaseUuid"                      uuid                     not null,
+    "TestCaseVersion"                   integer                  not null,
+    "TestCaseName"                      varchar                  not null
 );
 
 comment on table "FenixExecution"."TestInstructionExecutionQueue" is 'All TestInstructions to be sent for Execution';
